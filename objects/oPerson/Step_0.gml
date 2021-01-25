@@ -1,9 +1,11 @@
-var leftMouseButtonWasPressed = oInput.leftMouseButtonWasPressed;
-
-if (state == PersonState.IDLE && leftMouseButtonWasPressed) {
+if (state == PersonState.IDLE && hasWalkTarget) {
 	state = PersonState.WALKING;
 } else if (state == PersonState.WALKING && x == walkTargetX && y == walkTargetY) {
 	state = PersonState.IDLE;
+	
+	hasWalkTarget = false;
+	walkTargetX = -1;
+	walkTargetY = -1;
 }
 
 switch (state) {
@@ -13,11 +15,6 @@ switch (state) {
 	} break;
 	
 	case PersonState.WALKING: {
-		if (leftMouseButtonWasPressed) {
-			walkTargetX = oInput.mouseX;
-			walkTargetY = oInput.mouseY;
-		}
-		
 		var walkDirection = point_direction(x, y, walkTargetX, walkTargetY);
 		var cardinalDirection = floor(((walkDirection + 45) % 360) / 90);		
 		switch (cardinalDirection) {

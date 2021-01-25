@@ -1,8 +1,10 @@
 mouseX = -1;
 mouseY = -1;
 
-leftMouseButtonWasPressed = false;
-rightMouseButtonWasPressed = false;
+selectWasPressed = false;
+executeWasPressed = false;
 
 moveCameraHorizontal = false;
 moveCameraVertical = false;
+
+addPersonWasPressed = false;

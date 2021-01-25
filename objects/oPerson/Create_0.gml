@@ -15,5 +15,6 @@ WALK_SPEED = 0.5;
 state = PersonState.IDLE;
 lastCardinalDirection = CardinalDirection.DOWN;
 
+hasWalkTarget = false;
 walkTargetX = -1;
 walkTargetY = -1;

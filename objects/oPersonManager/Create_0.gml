@@ -1,0 +1,1 @@
+selectedPerson = noone;
