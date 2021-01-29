@@ -8,3 +8,4 @@ moveCameraHorizontal = false;
 moveCameraVertical = false;
 
 addPersonWasPressed = false;
+pauseWasPressed = false;

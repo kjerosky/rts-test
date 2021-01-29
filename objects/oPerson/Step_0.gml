@@ -1,3 +1,10 @@
+if (oGameManager.gameIsPaused) {
+	image_speed = 0;
+	exit;
+}
+
+image_speed = 1;
+
 if (state == PersonState.IDLE && hasWalkTarget) {
 	state = PersonState.WALKING;
 } else if (state == PersonState.WALKING && x == walkTargetX && y == walkTargetY) {
